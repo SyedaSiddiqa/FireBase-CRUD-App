@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    background:
+        radial-gradient(circle at 15% 20%, rgba(255,224,102,.35), transparent 40%),
+        radial-gradient(circle at 85% 15%, rgba(255,241,180,.5), transparent 45%),
+        radial-gradient(circle at 50% 90%, rgba(255,214,89,.25), transparent 50%),
+        #fffdf5;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    padding:40px 20px;
+}
+
+.container{
+    width:100%;
+    max-width:700px;
+    background:#ffffff;
+    padding:35px 30px;
+    border-radius:22px;
+    box-shadow:0 15px 40px rgba(255,193,7,.18), 0 2px 8px rgba(0,0,0,.04);
+    margin-bottom:35px;
+    border:1px solid #fff3c4;
+    position:relative;
+    overflow:hidden;
+}
+
+.container::before{
+    content:"";
+    position:absolute;
+    top:-60px;
+    right:-60px;
+    width:150px;
+    height:150px;
+    background:radial-gradient(circle, #ffe066, transparent 70%);
+    border-radius:50%;
+    opacity:.6;
+}
+
+h1{
+    color:#3a2e00;
+    text-align:center;
+    margin-bottom:28px;
+    font-weight:700;
+    font-size:28px;
+    letter-spacing:.3px;
+    position:relative;
+}
+
+h1::after{
+    content:"🍯";
+    margin-left:8px;
+    font-size:24px;
+}
+
+.form{
+    display:flex;
+    flex-direction:column;
+    gap:16px;
+    position:relative;
+}
+
+input{
+    width:100%;
+    padding:15px 18px;
+    border:2px solid #fff1b8;
+    outline:none;
+    border-radius:12px;
+    background:#fffdf0;
+    color:#3a2e00;
+    font-size:15px;
+    transition:.25s ease;
+}
+
+input::placeholder{
+    color:#c9b877;
+}
+
+input:focus{
+    background:#ffffff;
+    border-color:#ffc93c;
+    box-shadow:0 0 0 4px rgba(255,201,60,.18);
+}
+
+.buttons{
+    display:flex;
+    gap:15px;
+}
+
+#add,
+#update{
+    flex:1;
+    padding:14px;
+    border:none;
+    border-radius:12px;
+    color:#3a2e00;
+    font-size:15px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.25s ease;
+    letter-spacing:.2px;
+}
+
+#add{
+    background:#ffd93c;
+    box-shadow:0 6px 16px rgba(255,201,60,.4);
+}
+
+#add:hover{
+    background:#ffcf1a;
+    transform:translateY(-2px);
+    box-shadow:0 10px 20px rgba(255,201,60,.5);
+}
+
+#update{
+    background:#fff3c4;
+    color:#7a5c00;
+    box-shadow:0 6px 16px rgba(255,224,102,.4);
+}
+
+#update:hover{
+    background:#ffe680;
+    transform:translateY(-2px);
+    box-shadow:0 10px 20px rgba(255,224,102,.5);
+}
+
+.table-container{
+    width:100%;
+    max-width:900px;
+    background:#ffffff;
+    border-radius:20px;
+    padding:6px;
+    box-shadow:0 15px 40px rgba(255,193,7,.15), 0 2px 8px rgba(0,0,0,.04);
+    border:1px solid #fff3c4;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    border-radius:16px;
+    overflow:hidden;
+}
+
+thead{
+    background:linear-gradient(135deg,#ffe066,#ffd23c);
+    color:#3a2e00;
+}
+
+th{
+    padding:16px;
+    text-align:center;
+    font-weight:600;
+    font-size:14px;
+    letter-spacing:.4px;
+    text-transform:uppercase;
+}
+
+td{
+    padding:15px;
+    text-align:center;
+    color:#4a3d00;
+    font-size:14.5px;
+}
+
+tbody tr{
+    transition:.2s ease;
+    border-bottom:1px solid #fff6db;
+}
+
+tbody tr:last-child{
+    border-bottom:none;
+}
+
+tbody tr:nth-child(even){
+    background:#fffdf0;
+}
+
+tbody tr:hover{
+    background:#fff6d6;
+    transform:scale(1.01);
+}
+
+.delete,
+.update{
+    border:none;
+    padding:9px 16px;
+    border-radius:10px;
+    color:#fff;
+    cursor:pointer;
+    font-weight:600;
+    font-size:13px;
+    transition:.25s ease;
+}
+
+.delete{
+    background:#ff8a8a;
+}
+
+.delete:hover{
+    background:#ff6b6b;
+    transform:translateY(-1px);
+}
+
+.update{
+    background:#4fb0ff;
+}
+
+.update:hover{
+    background:#2e9bff;
+    transform:translateY(-1px);
+}
+
+/* empty state look when table has no rows */
+tbody:empty::after{
+    content:"No data yet — add your first entry 🍯";
+}
+
+@media(max-width:768px){
+
+    .buttons{
+        flex-direction:column;
+    }
+
+    table{
+        font-size:13px;
+    }
+
+    th,
+    td{
+        padding:10px;
+    }
+
+    h1{
+        font-size:24px;
+    }
+}

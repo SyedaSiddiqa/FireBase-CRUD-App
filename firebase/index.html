@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firebase CRUD App</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>Firebase CRUD App</h1>
+
+        <div class="form">
+
+            <input
+                type="text"
+                id="name"
+                placeholder="Enter Name"
+            >
+
+            <input
+                type="email"
+                id="email"
+                placeholder="Enter Email"
+            >
+
+            <div class="buttons">
+                <button id="add">Add Data</button>
+                <button id="update" style="display:none;">
+                    Update Data
+                </button>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="table-container">
+
+        <table>
+
+            <thead>
+
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Delete</th>
+                    <th>Update</th>
+                </tr>
+
+            </thead>
+
+            <tbody id="table">
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+    <script type="module" src="script.js"></script>
+
+</body>
+</html>
