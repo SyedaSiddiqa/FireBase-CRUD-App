@@ -15,13 +15,13 @@ import {
 
 // ================= Firebase Config =================
 const firebaseConfig = {
-  apiKey: "AIzaSyBKXTwalJDbuOG32dapRSYnXBC47Z30Xho",
-  authDomain: "crudweb-424b5.firebaseapp.com",
-  projectId: "crudweb-424b5",
-  storageBucket: "crudweb-424b5.firebasestorage.app",
-  messagingSenderId: "1025559522774",
-  appId: "1:1025559522774:web:da43d994039d4693318877",
-  measurementId: "G-KT3MYHY7XW",
+  apiKey: 
+  authDomain: 
+  projectId: 
+  storageBucket: 
+  messagingSenderId: 
+  appId: 
+  measurementId:
 };
 
 // ================= Initialize Firebase =================
